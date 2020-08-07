@@ -1,14 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
+import Home from './pages/Home';
 
 const App = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Tauruseer App</h1>
-      </header>
-    </div>
-  );
+  return <Home />;
 };
 
 render(React.createElement(App), document.getElementById('root'));
