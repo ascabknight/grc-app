@@ -2,12 +2,15 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Home } from './pages/Home';
+import NavBar from './components/NavBar';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { GlobalStyles } from './styles'
 
 // Set up pages using the React Router Link element for navigation - instead of <a></a>
 const App = () => (
   <main>
-    <h1>React Router</h1>
-
+    <GlobalStyles />
+    <NavBar />
     <div>
       <Route exact path='/' component={Home} />
     </div>
