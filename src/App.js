@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Home } from './pages/Home';
+import { Wizard } from './pages/Wizard';
 import NavBar from './components/NavBar';
 import { GlobalStyles } from './styles';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,6 +14,7 @@ const App = () => (
     <NavBar />
     <div className="main-content">
       <Route exact path='/' component={Home} />
+      <Route path='/wizard' component={Wizard} />
     </div>
   </main>
 )
