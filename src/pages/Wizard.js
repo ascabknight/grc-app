@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Steps } from '../components/Wizard/steps';
 import { Span } from './wizard.style';
+import { ProductInfo } from '../components/Wizard/ProductInfo';
 
 export const Wizard = () => {
   const totalSteps = 4;
@@ -25,9 +26,20 @@ export const Wizard = () => {
         </Col>
         <Col>
           <Span className="text-muted">Step {step}</Span>
-          {/* <Content>
-
-          </Content> */}
+          <Container fluid>
+            {step === 1 &&
+              <ProductInfo />
+            }
+            {step === 2 &&
+              <h1>Hello {step}</h1>
+            }
+            {step === 3 &&
+              <h1>Hello {step}</h1>
+            }
+            {step === 4 &&
+              <h1>Hello Last Step</h1>
+            }
+          </Container>
           <Row>
             {step < totalSteps &&
               <button className="btn btn-primary" onClick={nextStep}>Next Step</button>
