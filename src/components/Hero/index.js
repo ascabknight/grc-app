@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
-export const Hero = ({ headline, copy, ctaCopy }) =>
+export const Hero = ({ headline, copy, ctaCopy }) => (
   <Container fluid>
     <Row>
       <Col>
-        <h1 className="display-3">{headline}</h1>
+        <h1 className="display-4">{headline}</h1>
       </Col>
     </Row>
     <Row>
@@ -16,8 +16,9 @@ export const Hero = ({ headline, copy, ctaCopy }) =>
     <Row>
       <Col>
         <div className="center">
-          <Button>{ctaCopy}</Button>
+          <Button className="btn btn-primary btn-lg">{ctaCopy}</Button>
         </div>
       </Col>
     </Row>
   </Container>
+);
