@@ -7,7 +7,7 @@ export const Content_50 = ({ imgUrl, title, headline, ctaUrl, ctaText }) =>
         <Col className="center-content-column">
             <Image src={imgUrl} />
         </Col>
-        <Col className="center-content-column flex-column-center">
+        <Col className="flex-column-center">
             <Title>
                 {title}
             </Title>
