@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
-export const Hero = ({ headline, copy, ctaCopy }) => (
+export const Hero = ({ headline, copy, ctaCopy, ctaHandler }) => (
   <Container fluid>
     <Row>
       <Col>
@@ -16,7 +16,9 @@ export const Hero = ({ headline, copy, ctaCopy }) => (
     <Row>
       <Col>
         <div className="center">
-          <Button className="btn btn-primary btn-lg">{ctaCopy}</Button>
+          <Button className="btn btn-primary btn-lg" onClick={ctaHandler}>
+            {ctaCopy}
+          </Button>
         </div>
       </Col>
     </Row>
