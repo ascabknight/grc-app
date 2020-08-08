@@ -1,20 +1,20 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 
 export const Hero = ({ headline, copy, ctaCopy, ctaHandler }) => (
-  <Container fluid>
+  <>
     <Row>
-      <Col>
+      <Col className="center-content-column">
         <h1 className="display-4">{headline}</h1>
       </Col>
     </Row>
     <Row>
-      <Col>
+      <Col className="center-content-column">
         <p className="lead">{copy}</p>
       </Col>
     </Row>
     <Row>
-      <Col>
+      <Col className="center-content-column">
         <div className="center">
           <Button className="btn btn-primary btn-lg" onClick={ctaHandler}>
             {ctaCopy}
@@ -22,5 +22,5 @@ export const Hero = ({ headline, copy, ctaCopy, ctaHandler }) => (
         </div>
       </Col>
     </Row>
-  </Container>
+  </>
 );
