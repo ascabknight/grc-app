@@ -1,15 +1,15 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import {Title} from './content_50.style';
+import styles from './content_50.module.scss';
 
-export const content_50 = () =>
+export const Content_50 = () =>
     <Row>
         <Col>
-            <image src="https://placehold.it/300x300" />
+            <img src="https://placehold.it/300x300" />
         </Col>
         <Col>
-            <Title>
+            <h2 className={styles.title}>
                 Lorem Ipsum
-            </Title>
+            </h2>
         </Col>
     </Row>
