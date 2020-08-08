@@ -17,7 +17,6 @@ export const Wizard = () => {
     console.log("put here behavior after finishin wizard");
   }
 
-
   return (
     <Container fluid className="mt-5">
       <Row>
