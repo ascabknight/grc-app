@@ -1,59 +1,45 @@
-import React from 'react';
-import { Card, CardDeck } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Row, Col } from 'react-bootstrap';
+import { CardProduct } from './Card';
 
-export const ProductIntegrations = ({ siteSelectedCallback }) => (
-  <>
-    <CardDeck>
-      <Card>
-        <Card.Img variant="top" src="http://placehold.it/50x50" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src="http://placehold.it/50x50" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src="http://placehold.it/50x50" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src="http://placehold.it/50x50" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src="http://placehold.it/50x50" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    </CardDeck>
-  </>
-);
+export const ProductIntegrations = ({ selectCard }) => {
+  const products = [{
+    id: '1',
+    img: 'http://placehold.it/300x150',
+    title: 'title product',
+    text: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum'
+  }, {
+    id: '2',
+    img: 'http://placehold.it/300x150',
+    title: 'title product',
+    text: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum'
+  },{
+    id: '3',
+    img: 'http://placehold.it/300x150',
+    title: 'title product',
+    text: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum'
+  },{
+    id: '4',
+    img: 'http://placehold.it/300x150',
+    title: 'title product',
+    text: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum'
+  }
+];
+
+  const [selectedCard, setSelected] = useState('')
+
+  const handleSelectedCard = (selected) => {
+    setSelected(selected);  
+    selectCard(selected);
+  }
+
+  return (
+    <>
+      <Row xs={12} md={2} lg={3}>
+        {products.map((product, index) => [
+          <Col className="mt-2" key={index} onClick={() => handleSelectedCard(product.id)}><CardProduct {...product} selected={selectedCard === product.id ? true : false} /></Col>,
+        ])}
+      </Row>
+    </>
+  )
+}

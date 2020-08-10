@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 const colorCompleted = '#ffffff';
+const colorPrimary = '#007bff';
 
 export const GlobalStyles = createGlobalStyle`
   .main-content {
@@ -62,5 +63,23 @@ export const GlobalStyles = createGlobalStyle`
         content: "";
         transform: translateX(10px) rotate(-45deg);
         transform-origin: left bottom;
+    }
+
+    .selectableCard{
+        & img {
+            height: 150px;
+            object-fit: cover;
+            width: 100%;
+        }
+       
+    }
+
+    .clickable{
+        cursor:pointer;
+    }
+
+    .selectedCard {
+        border-color: ${colorPrimary};
+        box-shadow: 0px 0px 10px #007bff;
     }
 `

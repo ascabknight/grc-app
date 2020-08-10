@@ -9,14 +9,20 @@ import { ProductIntegrations } from '../components/Wizard/ProductIntegrations';
 export const Wizard = () => {
   const totalSteps = 4;
   const [step, setStep] = useState(1);
+  const [card, setCard] = useState('');
 
   const nextStep = () => {
     if (step < totalSteps) setStep(step + 1);
   };
 
   const submit = () => {
+    console.log('Selected Card: ', card);
     console.log('This is done.');
   };
+
+  const selectCard = (selected) => {
+    setCard(selected);
+  }
 
   return (
     <Container fluid className="mt-5">
@@ -29,12 +35,12 @@ export const Wizard = () => {
           <Container fluid>
             {step === 1 && <UserInfo />}
             {step === 2 && <ProductInfo />}
-            {step === 3 && <ProductIntegrations />}
+            {step === 3 && <ProductIntegrations selectCard={selectCard} />}
             {step === 4 && <h1>Hello Last Step</h1>}
           </Container>
           <Row className="mt-5">
             {step < totalSteps && (
-              <button className="btn btn-primary" onClick={nextStep}>
+              <button disabled={step === 3 && card === ''} className="btn btn-primary" onClick={nextStep}>
                 Next Step
               </button>
             )}
