@@ -28,6 +28,7 @@ export const Home = () => (
         headline="Your Continuous Assurance Platform"
         copy="Tauruseer's lightweight continuous assurance platform automates cognitive risk through existing code pipelines and cloud solutions to proactively aggregate siloed data, identify risk, and recommend the right actions to protect against preventable loss caused by human, process, and product threats. "
         ctaCopy="Get Started"
+        ctaAction="/wizard"
       />
     </Row>
     <Row className="mt-5">

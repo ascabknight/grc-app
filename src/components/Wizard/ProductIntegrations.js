@@ -1,29 +1,23 @@
 import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { CardProduct } from './Card';
-import github from './img/github.png';
 
 export const ProductIntegrations = ({ selectCard }) => {
   const products = [
     {
       id: '1',
-      img: { github },
+      img: '/images/github.png',
       title: 'Github',
     },
     {
       id: '2',
-      img: './img/gitlab.png',
+      img: '/images/gitlab.png',
       title: 'Gitlab',
     },
     {
       id: '3',
-      img: 'http://placehold.it/300x150',
+      img: '/images/azuredevops.png',
       title: 'Jira',
-    },
-    {
-      id: '4',
-      img: 'http://placehold.it/300x150',
-      title: 'Bitbucket',
     },
   ];
 

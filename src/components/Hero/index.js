@@ -1,7 +1,8 @@
 import React from 'react';
-import { Row, Col, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { Row, Col } from 'react-bootstrap';
 
-export const Hero = ({ headline, copy, ctaCopy, ctaHandler }) => (
+export const Hero = ({ headline, copy, ctaCopy, ctaAction }) => (
   <>
     <Row>
       <Col className="center-content-column">
@@ -16,9 +17,9 @@ export const Hero = ({ headline, copy, ctaCopy, ctaHandler }) => (
     <Row>
       <Col className="center-content-column">
         <div className="center">
-          <Button className="btn btn-primary btn-lg" onClick={ctaHandler}>
+          <Link className="btn btn-primary btn-lg" to={ctaAction}>
             {ctaCopy}
-          </Button>
+          </Link>
         </div>
       </Col>
     </Row>
