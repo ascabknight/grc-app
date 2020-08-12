@@ -1,8 +1,8 @@
 .headerText {
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1rem;
-  
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1rem;
+
   &Prod {
     @extend .headerText;
     margin-left: 5px;
@@ -14,5 +14,5 @@
 }
 
 .highlight {
-  color: "#5bc0de";
+  color: '#5bc0de';
 }

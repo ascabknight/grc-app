@@ -17,7 +17,7 @@ export const ProductIntegrations = ({ selectCard }) => {
     {
       id: '3',
       img: '/images/azuredevops.png',
-      title: 'Jira',
+      title: 'Azure Devops',
     },
   ];
 
@@ -30,6 +30,15 @@ export const ProductIntegrations = ({ selectCard }) => {
 
   return (
     <>
+      <Row>
+        <Col>
+          <h1 className="display-4">Lets setup your first configuration.</h1>
+          <p className="lead">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </Col>
+      </Row>
       <Row xs={12} md={2} lg={3}>
         {products.map((product, index) => [
           <Col
