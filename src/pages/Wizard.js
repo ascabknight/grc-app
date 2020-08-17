@@ -4,11 +4,12 @@ import { Steps } from '../components/Wizard/steps';
 import { Span } from './wizard.style';
 import { ProductInfo } from '../components/Wizard/ProductInfo';
 import { UserInfo } from '../components/Wizard/UserInfo';
+import { FinalStep } from '../components/Wizard/FinalStep';
 import { ProductIntegrations } from '../components/Wizard/ProductIntegrations';
 import { SourceConfiguration } from '../components/Wizard/SourceConfiguration';
 
 export const Wizard = () => {
-  const totalSteps = 4;
+  const totalSteps = 5;
   const [step, setStep] = useState(1);
   const [card, setCard] = useState('');
 
@@ -42,6 +43,7 @@ export const Wizard = () => {
             {step === 2 && <ProductInfo />}
             {step === 3 && <ProductIntegrations selectCard={selectCard} />}
             {step === 4 && <SourceConfiguration />}
+            {step === 5 && <FinalStep />}
           </Container>
           <Row className="mt-5">
             {step > 1 && (
@@ -61,7 +63,7 @@ export const Wizard = () => {
 
             {step === totalSteps && (
               <button className="btn btn-primary" onClick={submit}>
-                Continue
+                Finish
               </button>
             )}
           </Row>
