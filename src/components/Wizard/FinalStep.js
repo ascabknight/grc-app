@@ -13,7 +13,7 @@ export const FinalStep = () => (
       </Col>
     </Row>
     <Row className="mt-5">
-     <image src="http://placehold.it/300x300"></image>
+      <image src="http://placehold.it/300x300"></image>
     </Row>
   </>
 );

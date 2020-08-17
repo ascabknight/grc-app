@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
 export const Span = styled.span`
-    font-size: 24px;
+  font-size: 24px;
 `;
-
