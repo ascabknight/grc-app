@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 const colorCompleted = '#ffffff';
 const colorPrimary = '#007bff';
@@ -87,4 +87,4 @@ export const GlobalStyles = createGlobalStyle`
         border-color: ${colorPrimary};
         box-shadow: 0px 0px 10px #007bff;
     }
-`
+`;

@@ -13,16 +13,16 @@ const App = () => (
     <GlobalStyles />
     <NavBar />
     <div className="main-content">
-      <Route exact path='/' component={Home} />
-      <Route path='/wizard' component={Wizard} />
+      <Route exact path="/" component={Home} />
+      <Route path="/wizard" component={Wizard} />
     </div>
   </main>
-)
-
+);
 
 //Render app into the root HTML DOM node
-ReactDOM.render((
+ReactDOM.render(
   <BrowserRouter>
     <App />
-  </BrowserRouter>
-), document.getElementById('root'));
+  </BrowserRouter>,
+  document.getElementById('root')
+);

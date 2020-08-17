@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Form, Row, Col } from 'react-bootstrap';
 
-export const UserInfo = () => {
+export const UserInfo = ({ wizardCallback, companyName, email, name }) => {
+  const [userInfo, setUserInfo] = useState({ companyName, email, name });
+
+  const onInputChange = (event) => {
+    let fieldName = event.target.name;
+    let fieldVal = event.target.value;
+    setUserInfo({ ...userInfo, [fieldName]: fieldVal });
+    wizardCallback({ ...userInfo });
+  };
+
   return (
     <>
       <Row>
@@ -21,8 +30,10 @@ export const UserInfo = () => {
               <Form.Control
                 type="text"
                 size="lg"
+                name="companyName"
                 placeholder="Your company name"
-                value="asd"
+                defaultValue={userInfo.companyName}
+                onChange={onInputChange}
               />
             </Form.Group>
             <Form.Group>
@@ -30,6 +41,7 @@ export const UserInfo = () => {
               <Form.Control
                 type="text"
                 size="lg"
+                name="name"
                 placeholder="Your full name"
               />
             </Form.Group>
@@ -38,6 +50,7 @@ export const UserInfo = () => {
               <Form.Control
                 type="text"
                 size="lg"
+                name="email"
                 placeholder="Your email address."
               />
             </Form.Group>

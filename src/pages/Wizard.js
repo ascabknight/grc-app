@@ -12,13 +12,16 @@ export const Wizard = () => {
   const totalSteps = 5;
   const [step, setStep] = useState(1);
   const [card, setCard] = useState('');
-  const userModel = { companyName:'', email:'', name:''};
+
+  const userModel = { companyName: '', email: '', name: '' };
+  const productModel = { productName: '', description: '' };
+  const sourceModel = { sourceUrl: '', credentials: '' };
 
   const [userInfo, setUserInfo] = useState(userModel);
 
-  const userInfoCallback = ({companyName, email, name})=>{
-    setUserInfo({companyName, email, name});
-  }
+  const userInfoCallback = ({ companyName, email, name }) => {
+    setUserInfo({ companyName, email, name });
+  };
 
   const nextStep = () => {
     if (step < totalSteps) setStep(step + 1);
@@ -46,7 +49,9 @@ export const Wizard = () => {
         <Col>
           <Span className="text-muted">Step {step}</Span>
           <Container fluid>
-            {step === 1 && <UserInfo wizardCallback ={userInfoCallback} userModel = {userInfo} />}
+            {step === 1 && (
+              <UserInfo wizardCallback={userInfoCallback} {...userInfo} />
+            )}
             {step === 2 && <ProductInfo />}
             {step === 3 && <ProductIntegrations selectCard={selectCard} />}
             {step === 4 && <SourceConfiguration />}
