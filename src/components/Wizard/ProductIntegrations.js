@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { CardProduct } from './Card';
 
-export const ProductIntegrations = ({ selectCard }) => {
+export const ProductIntegrations = ({ selectCard, actualCard }) => {
   const products = [
     {
       id: '1',
@@ -21,7 +21,7 @@ export const ProductIntegrations = ({ selectCard }) => {
     },
   ];
 
-  const [selectedCard, setSelected] = useState('');
+  const [selectedCard, setSelected] = useState(actualCard);
 
   const handleSelectedCard = (selected) => {
     setSelected(selected);

@@ -41,7 +41,7 @@ export const Wizard = () => {
           <Container fluid>
             {step === 1 && <UserInfo />}
             {step === 2 && <ProductInfo />}
-            {step === 3 && <ProductIntegrations selectCard={selectCard} />}
+            {step === 3 && <ProductIntegrations selectCard={selectCard} actualCard={card} />}
             {step === 4 && <SourceConfiguration />}
             {step === 5 && <FinalStep />}
           </Container>

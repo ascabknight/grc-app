@@ -22,7 +22,6 @@ export const UserInfo = () => {
                 type="text"
                 size="lg"
                 placeholder="Your company name"
-                value="asd"
               />
             </Form.Group>
             <Form.Group>
