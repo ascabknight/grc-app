@@ -8,7 +8,7 @@ export const ProductInfo = ({ wizardCallback, productName, description }) => {
     let fieldName = event.target.name;
     let fieldVal = event.target.value;
     setProductInfo({ ...productInfo, [fieldName]: fieldVal });
-    wizardCallback({ ...productInfo });
+    wizardCallback({ ...productInfo, [fieldName]: fieldVal });
   };
 
   return (

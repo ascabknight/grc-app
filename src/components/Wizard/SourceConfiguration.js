@@ -12,7 +12,7 @@ export const SourceConfiguration = ({
     let fieldName = event.target.name;
     let fieldVal = event.target.value;
     setSourceInfo({ ...sourceInfo, [fieldName]: fieldVal });
-    wizardCallback({ ...sourceInfo });
+    wizardCallback({ ...sourceInfo, [fieldName]: fieldVal });
   };
   return (
     <>
