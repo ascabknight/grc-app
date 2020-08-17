@@ -18,9 +18,19 @@ export const Wizard = () => {
   const sourceModel = { sourceUrl: '', credentials: '' };
 
   const [userInfo, setUserInfo] = useState(userModel);
+  const [productInfo, setProductInfo] = useState(productModel);
+  const [sourceInfo, setSourceInfo] = useState(sourceModel);
 
   const userInfoCallback = ({ companyName, email, name }) => {
     setUserInfo({ companyName, email, name });
+  };
+
+  const productInfoCallback = ({ productName, description }) => {
+    setProductInfo({ productName, description });
+  };
+
+  const sourceInfoCallback = ({ sourceUrl, credentials }) => {
+    setSourceInfo({ sourceUrl, credentials });
   };
 
   const nextStep = () => {
@@ -52,9 +62,21 @@ export const Wizard = () => {
             {step === 1 && (
               <UserInfo wizardCallback={userInfoCallback} {...userInfo} />
             )}
-            {step === 2 && <ProductInfo />}
-            {step === 3 && <ProductIntegrations selectCard={selectCard} actualCard={card} />}
-            {step === 4 && <SourceConfiguration />}
+            {step === 2 && (
+              <ProductInfo
+                wizardCallback={productInfoCallback}
+                {...productInfo}
+              />
+            )}
+            {step === 3 && (
+              <ProductIntegrations selectCard={selectCard} actualCard={card} />
+            )}
+            {step === 4 && (
+              <SourceConfiguration
+                wizardCallback={sourceInfoCallback}
+                {...sourceInfo}
+              />
+            )}
             {step === 5 && <FinalStep />}
           </Container>
           <Row className="mt-5">
