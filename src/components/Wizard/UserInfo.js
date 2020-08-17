@@ -33,7 +33,7 @@ export const UserInfo = ({ wizardCallback, companyName, email, name }) => {
                 name="companyName"
                 placeholder="Your company name"
                 defaultValue={userInfo.companyName}
-                onChange={onInputChange}
+                onKeyPress={onInputChange}
               />
             </Form.Group>
             <Form.Group>
@@ -43,6 +43,8 @@ export const UserInfo = ({ wizardCallback, companyName, email, name }) => {
                 size="lg"
                 name="name"
                 placeholder="Your full name"
+                defaultValue={userInfo.name}
+                onKeyUp={onInputChange}
               />
             </Form.Group>
             <Form.Group>
@@ -52,6 +54,8 @@ export const UserInfo = ({ wizardCallback, companyName, email, name }) => {
                 size="lg"
                 name="email"
                 placeholder="Your email address."
+                defaultValue={userInfo.email}
+                onKeyPress={onInputChange}
               />
             </Form.Group>
           </Form>
