@@ -4,6 +4,11 @@ const colorCompleted = '#ffffff';
 const colorPrimary = '#007bff';
 
 export const GlobalStyles = createGlobalStyle`
+
+    nav.navbar-dark {
+        box-shadow: 0px 0px 10px #343a40;
+
+    }
   .main-content {
     margin: 0 auto;
     @media (max-width: 767px) {
@@ -68,7 +73,7 @@ export const GlobalStyles = createGlobalStyle`
     .selectableCard{
         & img {
             height: 150px;
-            object-fit: cover;
+            object-fit: scale-down;
             width: 100%;
         }
        
