@@ -8,7 +8,7 @@ export const UserInfo = ({ wizardCallback, companyName, email, name }) => {
     let fieldName = event.target.name;
     let fieldVal = event.target.value;
     setUserInfo({ ...userInfo, [fieldName]: fieldVal });
-    wizardCallback({ ...userInfo });
+    wizardCallback({ ...userInfo, [fieldName]: fieldVal });
   };
 
   return (
@@ -33,7 +33,7 @@ export const UserInfo = ({ wizardCallback, companyName, email, name }) => {
                 name="companyName"
                 placeholder="Your company name"
                 defaultValue={userInfo.companyName}
-                onKeyPress={onInputChange}
+                onKeyUp={onInputChange}
               />
             </Form.Group>
             <Form.Group>
@@ -55,7 +55,7 @@ export const UserInfo = ({ wizardCallback, companyName, email, name }) => {
                 name="email"
                 placeholder="Your email address."
                 defaultValue={userInfo.email}
-                onKeyPress={onInputChange}
+                onKeyUp={onInputChange}
               />
             </Form.Group>
           </Form>
