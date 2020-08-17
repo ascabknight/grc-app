@@ -9,7 +9,7 @@ import { ProductIntegrations } from '../components/Wizard/ProductIntegrations';
 import { SourceConfiguration } from '../components/Wizard/SourceConfiguration';
 
 export const Wizard = () => {
-  const totalSteps = 5;
+  const totalSteps = 4;
   const [step, setStep] = useState(1);
   const [card, setCard] = useState('');
 
@@ -42,6 +42,7 @@ export const Wizard = () => {
   };
 
   const submit = () => {
+    console.log(userInfo, productInfo, sourceInfo);
     console.log('Selected Card: ', card);
     console.log('This is done.');
   };
@@ -71,13 +72,7 @@ export const Wizard = () => {
             {step === 3 && (
               <ProductIntegrations selectCard={selectCard} actualCard={card} />
             )}
-            {step === 4 && (
-              <SourceConfiguration
-                wizardCallback={sourceInfoCallback}
-                {...sourceInfo}
-              />
-            )}
-            {step === 5 && <FinalStep />}
+            {step === 4 && <FinalStep />}
           </Container>
           <Row className="mt-5">
             {step > 1 && (
