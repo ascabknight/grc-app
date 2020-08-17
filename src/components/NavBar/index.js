@@ -27,7 +27,6 @@ const NavBar = () => {
           loading="lazy"
         />
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
     </Navbar>
   );
 };
