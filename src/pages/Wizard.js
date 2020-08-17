@@ -16,6 +16,10 @@ export const Wizard = () => {
     if (step < totalSteps) setStep(step + 1);
   };
 
+  const previousStep = () => {
+    if (step > 0) setStep(step - 1);
+  };
+
   const submit = () => {
     console.log('Selected Card: ', card);
     console.log('This is done.');
@@ -40,13 +44,18 @@ export const Wizard = () => {
             {step === 4 && <SourceConfiguration />}
           </Container>
           <Row className="mt-5">
+            {step > 1 && (
+              <button className="btn btn-secondary mr-2" onClick={previousStep}>
+                Back
+              </button>
+            )}
             {step < totalSteps && (
               <button
                 disabled={step === 3 && card === ''}
                 className="btn btn-primary"
                 onClick={nextStep}
               >
-                Next Step
+                Next
               </button>
             )}
 
