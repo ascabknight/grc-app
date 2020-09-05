@@ -4,21 +4,20 @@ import { Hero } from '../components/Hero';
 import { Container, Row } from 'react-bootstrap';
 
 const complianceContentProps = {
-  imgUrl: 'http://placehold.it/300x300',
-  title: 'Compliance',
+  imgUrl: '/images/unplash_small.jpg',
+  title: 'Autonomous Risk Management',
   headline:
-    "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Tauruseer delivers Autonomous Risk Management that automatically contextualizes and prioritizes alerts associated with security, compliance and performance issues.",
   ctaUrl: 'http://www.google.com',
-  ctaText: 'Lorem Ipsum',
+  ctaText: 'Learn More',
 };
 
 const securityContentProps = {
-  imgUrl: 'http://placehold.it/300x300',
-  title: 'Security',
-  headline:
-    "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  imgUrl: '/images/sapiens.png',
+  title: 'Contextual Dashboards',
+  headline:"Tauruseer delivers contextual dashboards at the executive, department, and team level to connect siloed functions, correlate cross-domain data, recognize unexpected patterns, identify vulnerabilities, and mitigate risks.",
   ctaUrl: 'http://www.google.com',
-  ctaText: 'Lorem Ipsum',
+  ctaText: 'Learn More',
 };
 
 export const Home = () => (
@@ -26,7 +25,13 @@ export const Home = () => (
     <Row className="mt-5 flex-column-center">
       <Hero
         headline="Your Continuous Assurance Platform"
-        copy="Tauruseer's lightweight continuous assurance platform automates cognitive risk through existing code pipelines and cloud solutions to proactively aggregate siloed data, identify risk, and recommend the right actions to protect against preventable loss caused by human, process, and product threats. "
+        copy="TAURUSEER is a lightweight SaaS platform that
+        automatically delivers prescriptive advice and
+        predictive cognitions that help DevOps, Security,
+        and Compliance teams scale the right behaviors,
+        stay accountable, validate risk remediation and
+        provide real-time assurance back to business
+        leaders. "
         ctaCopy="Get Started"
         ctaAction="/wizard"
       />
