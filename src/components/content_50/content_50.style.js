@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Title = styled.h2``;
 
 export const Image = styled.img`
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
   max-height: 300px;
 `;
