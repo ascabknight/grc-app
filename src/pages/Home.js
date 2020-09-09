@@ -64,7 +64,7 @@ const items = [
 
 export const Home = () => (
   <Container fluid className="mb-5">
-    <Row className="mt-5 flex-column-center">
+    <Row className="mt-4 flex-column-center">
       <Hero
         headline="Your Continuous Assurance Platform"
         copy="TAURUSEER is a lightweight SaaS platform that
@@ -78,7 +78,7 @@ export const Home = () => (
         ctaAction="/wizard"
       />
     </Row>
-    <Row className="mt-5">
+    <Row className="mt-6">
       <Content_50
         imgUrl="/images/sapiens-dashboard.png"
         title="Contextual Dashboards"
@@ -105,13 +105,13 @@ export const Home = () => (
       />
     </Row>
 
-    <Row className="mt-5 row-reverse">
+    <Row className="mt-6 row-reverse">
       <Content_50 {...complianceContentProps} />
     </Row>
-    <Row className="mt-5">
+    <Row className="mt-6">
       <LineSeparator />
     </Row>
-    <Row className="mt-5">
+    <Row className="mt-6">
       <SurfaceExplainer
         headline="Simplify & Educate Continual Compliance."
         subline="Prescriptive cognitions enable a proactive,
@@ -119,7 +119,7 @@ export const Home = () => (
         items={items}
       />
     </Row>
-    <Row className="mt-5">
+    <Row className="mt-6 row-reverse">
       <Content_50
         imgUrl="/images/sapiens.png"
         title="Prescriptive Cognitions"

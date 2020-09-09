@@ -39,6 +39,10 @@ export const GlobalStyles = createGlobalStyle`
     flex-direction: column-reverse;
   }
 
+  .mt-6 {
+    margin-top: 5rem !important;
+  }
+
   #tick-mark {
     position: relative;
     display: inline-block;

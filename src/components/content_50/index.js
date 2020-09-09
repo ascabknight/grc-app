@@ -7,12 +7,16 @@ import styles from './content_50.scss';
 export const Content_50 = ({ imgUrl, title, headline, ctaUrl, ctaText }) => (
   <>
     <Col className="center-content-column">
-      <Image src={imgUrl} />
+      <Row>
+        <Image src={imgUrl} />
+      </Row>
     </Col>
     <Col className="flex-column-center">
-      <Title className="display-5">{title}</Title>
-      <Headline>{headline}</Headline>
-      <Link href={ctaUrl}>{ctaText}</Link>
+      <Row>
+        <Title className="display-5">{title}</Title>
+        <Headline>{headline}</Headline>
+        <Link href={ctaUrl}>{ctaText}</Link>
+      </Row>
     </Col>
   </>
 );

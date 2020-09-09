@@ -9,7 +9,7 @@ function PrintedColumns(items) {
     const printedItems = items.map((item) => (
       <PrintedItem key={item.title} item={item} />
     ));
-    return <Row className="mt-5">{printedItems}</Row>;
+    return <Row className="mt-3">{printedItems}</Row>;
   }
 }
 
