@@ -6,7 +6,7 @@ export const Hero = ({ headline, copy, ctaCopy, ctaAction }) => (
   <>
     <Row>
       <Col className="center-content-column">
-        <h1 className="display-4">{headline}</h1>
+        <h1 className="display-3">{headline}</h1>
       </Col>
     </Row>
     <Row>

@@ -8,6 +8,6 @@ export const Image = styled.img`
   max-height: 300px;
 `;
 
-export const Headline = styled.p``;
+export const Headline = styled.div``;
 
 export const Link = styled.a``;
